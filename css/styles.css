@@ -1,0 +1,733 @@
+:root {
+	--background: #f4f6fa;
+	--secondary: #313e51;
+	--ascent: #626c7f;
+	--ascent2: #abc1e1;
+	--ascent3: #edf1f9;
+	--purple: #a729f5;
+	--green: #26d782;
+	--green100: rgba(38, 215, 130, .05);
+	--red: #ee5454;
+	--button: #fff;
+	--buttonT: #fff;
+	/*
+	--background: #313e51;
+	--secondary: #ffff;
+	--button: #3b4d66;
+	--ascent: #abc1e1;
+	--ascent3: #2d3949;
+	*/
+}
+
+
+* {
+	color: var(--secondary);
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Rubik';
+	scroll-behavior: smooth;
+}
+
+
+body {
+	background: url("images/pattern-background-mobile-light.svg"), var(--background);
+	background-size: 60%, cover!important;
+	background-repeat: no-repeat!important;
+}
+
+
+div.body {
+	display: none;
+	padding: 8rem 4% 3rem;
+	position: relative;
+}
+
+
+button, label {
+	background: var(--button);
+	margin: 1rem 0 0;
+	height: 4rem;		width: 100%;
+	font-size: 16px;
+	font-weight: 500;
+	display: block;
+	border: none;
+	border-radius: 8px;
+	position: relative;
+	cursor: pointer;
+}
+
+
+img {
+	object-fit: contain;
+	object-position: center;
+}
+
+
+p {
+	margin: 1.5rem 0 5px;
+	font-size: 13px;
+	font-style: oblique;
+	opacity: .5;
+}
+
+
+h1 span {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+
+h1 span:nth-of-type(1) {
+	font-size: 2.47rem;
+	font-weight: 300;
+	animation-name: wordSh;
+	animation-duration: 1.5s;
+}
+
+
+@keyframes wordSh {
+	0% {
+		width: 0;
+	}
+	
+	100% {
+		width: 100%;
+	}
+}
+
+
+h1 span:nth-of-type(2) {
+	font-size: 2.7rem;
+	animation-name: wordSh2;
+	animation-duration: 3s;
+}
+
+
+@keyframes wordSh2 {
+	0% {
+		width: 0;
+	}
+	
+	40% {
+		width: 0%;
+	}
+	
+	100% {
+		width: 100%;
+	}
+}
+
+
+
+/*----------------------------------------------------------
+PRELOADER
+----------------------------------------------------------*/
+
+
+div.preloader, div.loader {
+	margin: 0 auto;
+	height: 100%;		width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	position: absolute;
+}
+
+
+div.preloader img, div.loader img {
+	width: 4rem;
+	position: relative;
+	top: 35%;
+	animation-name: spin;
+	animation-duration: 12s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	
+	100% {
+		transform: rotate(3600deg);
+	}
+}
+
+
+div.loader {
+	position: fixed;
+	left: 0;
+	display: none;
+}
+
+
+div.loader img {
+	top: 15%;
+}
+
+
+/*----------------------------------------------------------
+MODE TOGGLE
+----------------------------------------------------------*/
+
+
+div.toggleBox {
+	width: 7rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	top: 2rem;		right: 4%;
+}
+
+
+div.toggleBox img {
+	width: 1.5rem;
+	cursor: pointer;
+}
+
+
+div.toggleBox span {
+	background: var(--purple);
+	height: 1.3rem;		width: 2.5rem;
+	display: block;
+	border-radius: 10px;
+}
+
+
+div.toggleBox span span {
+	background: var(--button);
+	margin: .2rem;
+	height: .9rem;		width: .9rem;
+	border-radius: 50%;
+	transition: margin .3s;
+}
+
+
+
+/*----------------------------------------------------------
+PAGE 1
+----------------------------------------------------------*/
+
+
+section.page1 div.intro p {
+	animation-name: h1P;
+	animation-duration: 3.5s;
+}
+
+
+@keyframes h1P {
+	0% {
+		opacity: 0;
+	}
+	
+	67% {
+		opacity: 0;
+	}
+	
+	100% {
+		opacity: .5;
+	}
+}
+
+
+
+
+section.page1 div.subjects {
+	animation-name: subjects;
+	animation-duration: 4s;
+}
+
+
+@keyframes subjects {
+	0% {
+		transform: translate(0, 8rem);
+		opacity: 0;
+	}
+	
+	82% {
+		transform: translate(0, 8rem);
+		opacity: 0;
+	}
+	
+	
+	100% {
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+
+section.page1 div.subjects button {
+	font-size: 17px;
+}
+
+
+section.page1 div.subjects button img {
+	height: 100%;		width: 2.2rem;
+	position: absolute;
+	top: 0;		left: 1rem;
+}
+
+
+
+
+
+/*----------------------------------------------------------
+PAGE2
+----------------------------------------------------------*/
+
+
+section.page2 {
+	
+}
+
+
+
+
+
+
+
+div.subjectSh, div.subjectSh3 {
+	font-size: 16px;
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 2rem;		left: 4%;
+}
+
+
+div.subjectSh img, div.subjectSh3 img {
+	margin: 0 1rem 0 0;
+	width: 1.6rem;
+}
+
+
+section.page2 div.question p:nth-of-type(2) {
+	margin: 16px 0 10px;
+	font-size: 2rem;
+	font-weight: 700;
+	font-style: normal;
+	opacity: 1;
+}
+
+
+section.page2 div.question span.progress {
+	background: var(--button);
+	margin: 14px 0 0;
+	height: 9px;		width: 100%;
+	display: block;
+	border-radius: 10px;
+}
+
+
+section.page2 div.question span.progress span {
+	background: var(--purple);
+	height: 100%;		width: 67%;
+	display: block;
+	border-radius: inherit;
+}
+
+
+
+div.options {
+	margin: 1.3rem 0 0;
+}
+
+
+div.options input {
+	display: none;
+}
+
+
+div.options label.btn {
+	margin: 14px 0 0;
+	padding: 10px 4%;
+	height: auto;		width: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 3px solid var(--button);
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-duration: 1s;
+}
+
+
+@keyframes correctGrn {
+	0% {
+		background: var(--button);
+	}
+	
+	100% {
+		background: var(--green100);
+	}
+}
+
+
+div.options label#btnD {
+	cursor: default;
+}
+
+
+div.options input:checked + label.btn {
+	border-color: var(--purple);
+}
+
+
+div.options label.btn span:nth-of-type(2) {
+	font-size: 16px;
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+}
+
+
+div.options label.btn span.optionBullet {
+	background: var(--ascent3);
+	color: var(--ascent);
+	font-size: 17px;
+	height: 2rem;		width: 2rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 7px;
+}
+
+
+div.options input:checked + label.btn span.optionBullet {
+	color: var(--buttonT);
+	background: var(--purple);
+}
+
+
+div.options label.btn span:nth-of-type(3) {
+	height: 100%;		width: 1.5rem;
+	position: relative;
+}
+
+
+div.options label.btn span:nth-of-type(3) img {
+	min-height: 1.5rem;		width: 1.5rem;
+	position: relative;
+	opacity: 0;
+}
+
+
+
+
+
+div.options label.btn span:nth-of-type(3) img:nth-of-type(2) {
+	position: absolute;
+	left: 0;
+	
+}
+
+
+div.options button {
+	color: var(--buttonT);
+	background: var(--purple);
+	margin: 1.2rem 0 0;
+	font-size: 1.4rem;
+}
+
+
+div.options button + span {
+	margin: 1rem auto 0;
+	font-size: 15px;
+	width: 12.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	opacity: 0;
+}
+
+
+div.options button + span span {
+	color: var(--red);
+}
+
+
+
+
+/*----------------------------------------------------------
+PAGE3
+----------------------------------------------------------*/
+
+
+section.page3 {
+	display: none;
+}
+
+
+section.page3 div.score {
+	background: var(--button);
+	margin: 1rem 0 0;
+	padding: 1.5rem 0;
+	border-radius: 10px;
+	text-align: center;
+	animation-name: scoreSh;
+	animation-duration: 3.45s;
+}
+
+
+@keyframes scoreSh {
+	0% {
+		opacity: 0;
+		transform: translate(0,1rem);
+	}
+	
+	60% {
+		opacity: 0;
+		transform: translate(0,1rem);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+
+section.page3 div.score div.title {
+	
+}
+
+
+section.page3 div.score div.title img {
+	margin: 0 3px 0 0;
+	width: 1.4rem;
+}
+
+
+section.page3 div.score div.title span {
+	margin: 0 0 0 3px;
+	font-size: 16px;
+	font-weight: 500;
+	position: relative;
+	top: -6px;
+}
+
+
+
+
+section.page3 div.score p.score {
+	margin: -8px 0 0;
+	font-size: 6rem;
+	font-style: normal;
+	font-weight: 600;
+	opacity: 1;
+}
+
+
+section.page3 div.score p.score + p {
+	margin: 0;
+	font-size: 15px;
+	font-style: normal;
+}
+
+
+section.page3 button {
+	background: var(--purple);
+	color: var(--buttonT);
+	margin: 1.6rem 0 0;
+	font-size: 1.5rem;
+	animation-name: btnSh;
+	animation-duration: 4s;
+}
+
+
+@keyframes btnSh {
+	0% {
+		opacity: 0;
+	}
+	
+	70% {
+		opacity: 0;
+	}
+	
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+
+/*----------------------------------------------------------
+----------------------------------------------------------
+----------------------------------------------------------
+DESKTOP
+----------------------------------------------------------
+----------------------------------------------------------
+----------------------------------------------------------*/
+
+
+
+@media screen and (min-width: 425px) {
+	
+	
+	body {
+		background: url("images/pattern-background-desktop-light.svg"), var(--background);
+		background-size: 100%, cover!important;
+		background-repeat: no-repeat!important;
+	}
+	
+	div.body {
+		display: none;
+		padding: 8rem 8% 0;
+	}
+
+	
+	
+	/*----------------------------------------------------------
+	MODE TOGGLE
+	----------------------------------------------------------*/
+	
+	
+	div.toggleBox {
+		top: 3.2rem;		right: 8%;
+	}
+	
+	
+	
+	/*----------------------------------------------------------
+	PAGE1
+	----------------------------------------------------------*/
+	
+	
+	section.page1 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	
+	section.page1 div.intro {
+		position: relative;
+		top: -1rem;
+	}
+	
+	
+	section.page1 div.subjects {
+		min-width: 20rem;
+	}
+	
+	
+	@keyframes subjects {
+		0% {
+			transform: translate(8rem, 0);
+			opacity: 0;
+		}
+		
+		82% {
+			transform: translate(8rem, 0);
+			opacity: 0;
+		}
+		
+		
+		100% {
+			transform: translate(0);
+			opacity: 1;
+		}
+	}
+	
+	
+	
+	
+	/*----------------------------------------------------------
+	PAGE2
+	----------------------------------------------------------*/
+	
+	
+	section.page2 {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	
+	div.subjectSh, div.subjectSh3 {
+		top: 3.2rem;		left: 8%;
+	}
+	
+	
+	section.page2 div.question {
+		width: 45%;
+		max-width: 23rem;
+		position: relative;
+		top: 2rem;
+	}
+	
+	
+	section.page2 div.question p:nth-of-type(2) {
+		margin-bottom: 2rem;
+		font-size: 1.86rem;
+		display: inline-block;
+	}
+	
+	
+	section.page2 div.question span.progress {
+		position: absolute;
+		top: 14.4rem;
+	}
+	
+	
+	section.page2 div.options {
+		width: 21rem;
+	}
+	
+	
+	
+	/*----------------------------------------------------------
+	PAGE3
+	----------------------------------------------------------*/
+	
+	
+	section.page3 {
+		display: none;
+		justify-content: space-between;
+	}
+	
+	
+	section.page3 h1 {
+		width: 45%;
+		position: relative;
+		top: 3rem;
+	}
+	
+	
+	section.page3 h1 + div {
+		max-width: 21rem;
+		width: 45%;
+		animation-name: scoreShD;
+		animation-duration: 3.4s;
+	}
+	
+	@keyframes scoreShD {
+		0% {
+			opacity: 0;
+			transform: translate(3rem, 0);
+		}
+		
+		70% {
+			opacity: 0;
+			transform: translate(3rem, 0);
+		}
+		
+		100% {
+			opacity: 1;
+			transform: translate(0);
+		}
+	}
+	
+	
+	section.page3 button {
+		animation-name: none;
+	}
+	
+}
