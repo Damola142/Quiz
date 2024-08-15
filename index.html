@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="images/favicon-32x32.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/styles.css">
+		<script src="js/scripts.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	
+	<body>
+		
+		<!----------------------------------------------------
+		PRELOADER
+		---------------------------------------------------->
+		
+		<div class="preloader">
+			<img src="images/spinner.svg">
+		</div>
+		<div class="body">
+		
+		
+		<div class="loader">
+			<img src="images/spinner.svg">
+		</div>
+		
+		
+		<!----------------------------------------------------
+		MODE TOGGLE
+		---------------------------------------------------->
+		
+		
+		<div class="toggleBox">
+			<img src="images/icon-sun-dark.svg" class="sun" onclick="modeToggle(this)">
+			<span><span></span></span>
+			<img src="images/icon-moon-dark.svg" class="moon" onclick="modeToggle(this)">
+		</div>
+		
+		
+		
+		<section class="page1">
+		
+			<div class="intro">
+				<h1>
+					<span>Welcome to the</span>
+					<span>Frontend Quiz!</span>
+				</h1>
+				
+				<p>Pick a subject to get started.</p>
+			</div>
+			
+			
+			<div class="subjects">
+				<button class="0" onclick="pickSubject(this)">
+					<img src="images/icon-html.svg">
+					<span>HTML</span>
+				</button>
+				
+				<button class="1" onclick="pickSubject(this)">
+					<img src="images/icon-css.svg">
+					<span>CSS</span>
+				</button>
+				
+				<button class="2" onclick="pickSubject(this)">
+					<img src="images/icon-js.svg">
+					<span>Javascript</span>
+				</button>
+				
+				<button class="3" onclick="pickSubject(this)">
+					<img src="images/icon-accessibility.svg">
+					<span>Accessibility</span>
+				</button>
+			</div>
+			
+		</section>
+		
+		
+		
+		<!----------------------------------------------------
+		PAGE2
+		All in JSON
+		---------------------------------------------------->
+		
+		
+		<div class="subjectSh">
+			<img src="" class="mnIcon">
+			<span class="mnTitle"></span>
+		</div>
+		
+		
+		
+		<!----------------------------------------------------
+		PAGE3
+		---------------------------------------------------->
+		
+		
+		<section class="page3">
+			
+			<div class="subjectSh3">
+				<img src="images/icon-html.svg">
+				<span>HTML</span>
+			</div>
+			
+			<h1>
+				<span>Quiz completed</span>
+				<span>You scored...</span>
+			</h1>
+			
+			<div>
+				<div class="score">
+					<div class="title">
+						<img src="images/icon-html.svg">
+						<span>HTML</span>
+					</div>
+					
+					<p class="score">4</p>
+					
+					<p>out of 10</p>
+				</div>
+				
+				<button onclick="playAgain ()">Play Again</button>
+			</div>
+			
+		</section>
+		
+		
+		<a href="#quiz" class="toBottom"></a>
+		<a id="quiz"></a>
+	</div></body>
+</html>
